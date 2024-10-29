@@ -6,8 +6,8 @@ import java.util.regex.Pattern;
 import java.io.File;
 
 public class TextData {
-    private String fileName;
-    private String text;
+    private final String fileName;
+    private final String text;
     private Integer numberOfVowels;
     private Integer numberOfConsonants;
     private Integer numberOfLetters;
