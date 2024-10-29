@@ -1,21 +1,19 @@
-package org.example;
-
-import javax.management.monitor.Monitor;
+package org.example.task1;
 
 public class Display {
-    int width;
-    int height;
-    int ppi;
-    String model;
+    private int width;
+    private int height;
+    private int ppi;
+    private String model;
 
-    Display(int width, int height, int ppi, String model) {
+    public Display(int width, int height, int ppi, String model) {
         this.width = width;
         this.height = height;
         this.ppi = ppi;
         this.model = model;
     }
 
-    void compareSize(Display m) {
+    public void compareSize(Display m) {
         if(this.width*this.height > m.width*this.height) {
             System.out.println(this.model + " has higher resolution than " + m.model);
         } else if (this.width*this.height < m.width*this.height) {
@@ -25,7 +23,7 @@ public class Display {
         }
     }
 
-    void compareSharpness(Display m) {
+    public void compareSharpness(Display m) {
         if(this.ppi > m.ppi) {
             System.out.println(this.model + " has higher sharpness than " + m.model);
         } else if (this.ppi < m.ppi) {
@@ -35,7 +33,7 @@ public class Display {
         }
     }
 
-    void compareWithMonitor(Display m) {
+    public void compareWithMonitor(Display m) {
         this.compareSize(m);
         this.compareSharpness(m);
     }
